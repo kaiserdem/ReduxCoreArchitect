@@ -8,16 +8,38 @@
 
 /* Begin PBXBuildFile section */
 		051FC9632E4200400017AE4A /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9622E4200400017AE4A /* ReduxCore */; };
+		051FC9772E4201CE0017AE4A /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9762E4201CE0017AE4A /* ReduxCore */; };
+		051FC9792E4201CE0017AE4A /* ReduxCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9762E4201CE0017AE4A /* ReduxCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		051FC9782E4201CE0017AE4A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				051FC9792E4201CE0017AE4A /* ReduxCore in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		051FC9532E42000E0017AE4A /* ReduxCoreArchitect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxCoreArchitect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxCoreAdapter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		051FC9552E42000E0017AE4A /* ReduxCoreArchitect */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ReduxCoreArchitect;
+			sourceTree = "<group>";
+		};
+		051FC96B2E4201A20017AE4A /* ReduxCoreAdapter */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ReduxCoreAdapter;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -31,6 +53,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		051FC9672E4201A20017AE4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				051FC9772E4201CE0017AE4A /* ReduxCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +68,8 @@
 			isa = PBXGroup;
 			children = (
 				051FC9552E42000E0017AE4A /* ReduxCoreArchitect */,
+				051FC96B2E4201A20017AE4A /* ReduxCoreAdapter */,
+				051FC9752E4201CE0017AE4A /* Frameworks */,
 				051FC9542E42000E0017AE4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,8 +78,16 @@
 			isa = PBXGroup;
 			children = (
 				051FC9532E42000E0017AE4A /* ReduxCoreArchitect.app */,
+				051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		051FC9752E4201CE0017AE4A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -76,6 +116,30 @@
 			productReference = 051FC9532E42000E0017AE4A /* ReduxCoreArchitect.app */;
 			productType = "com.apple.product-type.application";
 		};
+		051FC9692E4201A20017AE4A /* ReduxCoreAdapter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 051FC9722E4201A40017AE4A /* Build configuration list for PBXNativeTarget "ReduxCoreAdapter" */;
+			buildPhases = (
+				051FC9662E4201A20017AE4A /* Sources */,
+				051FC9672E4201A20017AE4A /* Frameworks */,
+				051FC9682E4201A20017AE4A /* Resources */,
+				051FC9782E4201CE0017AE4A /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				051FC96B2E4201A20017AE4A /* ReduxCoreAdapter */,
+			);
+			name = ReduxCoreAdapter;
+			packageProductDependencies = (
+				051FC9762E4201CE0017AE4A /* ReduxCore */,
+			);
+			productName = ReduxCoreAdapter;
+			productReference = 051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -87,6 +151,9 @@
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
 					051FC9522E42000E0017AE4A = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					051FC9692E4201A20017AE4A = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -109,6 +176,7 @@
 			projectRoot = "";
 			targets = (
 				051FC9522E42000E0017AE4A /* ReduxCoreArchitect */,
+				051FC9692E4201A20017AE4A /* ReduxCoreAdapter */,
 			);
 		};
 /* End PBXProject section */
@@ -121,10 +189,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		051FC9682E4201A20017AE4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		051FC94F2E42000E0017AE4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		051FC9662E4201A20017AE4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -311,6 +393,62 @@
 			};
 			name = Release;
 		};
+		051FC9732E4201A40017AE4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.ReduxCoreAdapter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		051FC9742E4201A40017AE4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.ReduxCoreAdapter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -332,6 +470,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		051FC9722E4201A40017AE4A /* Build configuration list for PBXNativeTarget "ReduxCoreAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				051FC9732E4201A40017AE4A /* Debug */,
+				051FC9742E4201A40017AE4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
@@ -347,6 +494,11 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		051FC9622E4200400017AE4A /* ReduxCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051FC9612E4200400017AE4A /* XCRemoteSwiftPackageReference "ReduxCore" */;
+			productName = ReduxCore;
+		};
+		051FC9762E4201CE0017AE4A /* ReduxCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 051FC9612E4200400017AE4A /* XCRemoteSwiftPackageReference "ReduxCore" */;
 			productName = ReduxCore;

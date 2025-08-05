@@ -8,7 +8,7 @@
 import SwiftUI
 import ReduxCore
 
-struct ContentView: View {
+struct CounterView: View {
     @State private var count: Int = 0
     @State private var cancellation: Cancellation?
     
@@ -20,6 +20,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
+            Text("")
+            
             Text("Count: \(count)")
             
             HStack {
