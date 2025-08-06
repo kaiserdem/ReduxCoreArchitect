@@ -9,7 +9,8 @@ import ReduxCore
 import SwiftUI
 import Dependencies
 
-enum CounterFeature {
+struct CounterFeature: Feature {
+    
     struct State {
         var count: Int = 0
         var isTimerRun: Bool = false
@@ -48,11 +49,9 @@ enum CounterFeature {
         }
     }
     
-    
     private static var currentTimerTask: Task<Void, Never>?
 
     static let timerMiddleware: ReduxCore.Middleware<State> = { dispatch, action, oldState, newState in
-        
         @Dependency(\.continuousClock) var clock
         
         switch action as? Action {
@@ -73,9 +72,11 @@ enum CounterFeature {
             break
         }
     }
+    
+    static var middlewares: [ReduxCore.Middleware<State>] {
+        return [timerMiddleware]
+    }
 }
-
-
 
 struct CounterStoreKey: EnvironmentKey {
     static var defaultValue: ObservableStore<CounterFeature.State>? = nil

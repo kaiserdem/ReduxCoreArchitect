@@ -38,4 +38,16 @@ final class ObservableStore<State> { //generic параметр, може бут
                             
 }
 
+protocol Feature {
+    associatedtype State
+    associatedtype Action: ReduxCore.Action
+    
+    static var reducer: ReduxCore.Reducer<State> { get }
+    static var middlewares: [ReduxCore.Middleware<State>] { get }
+}
 
+extension Feature {
+    static var middlewares: [ReduxCore.Middleware<State>] {
+        return []
+    }
+}
