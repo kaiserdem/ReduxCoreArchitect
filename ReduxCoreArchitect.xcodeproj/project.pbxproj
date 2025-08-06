@@ -10,6 +10,7 @@
 		051FC9632E4200400017AE4A /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9622E4200400017AE4A /* ReduxCore */; };
 		051FC9772E4201CE0017AE4A /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9762E4201CE0017AE4A /* ReduxCore */; };
 		051FC9792E4201CE0017AE4A /* ReduxCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9762E4201CE0017AE4A /* ReduxCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		051FC9852E4231FD0017AE4A /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9842E4231FD0017AE4A /* Dependencies */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				051FC9772E4201CE0017AE4A /* ReduxCore in Frameworks */,
+				051FC9852E4231FD0017AE4A /* Dependencies in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,6 +137,7 @@
 			name = ReduxCoreAdapter;
 			packageProductDependencies = (
 				051FC9762E4201CE0017AE4A /* ReduxCore */,
+				051FC9842E4231FD0017AE4A /* Dependencies */,
 			);
 			productName = ReduxCoreAdapter;
 			productReference = 051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */;
@@ -169,6 +172,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				051FC9612E4200400017AE4A /* XCRemoteSwiftPackageReference "ReduxCore" */,
+				051FC9832E4231FD0017AE4A /* XCRemoteSwiftPackageReference "swift-dependencies" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 051FC9542E42000E0017AE4A /* Products */;
@@ -490,6 +494,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		051FC9832E4231FD0017AE4A /* XCRemoteSwiftPackageReference "swift-dependencies" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-dependencies";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.3;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -502,6 +514,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 051FC9612E4200400017AE4A /* XCRemoteSwiftPackageReference "ReduxCore" */;
 			productName = ReduxCore;
+		};
+		051FC9842E4231FD0017AE4A /* Dependencies */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051FC9832E4231FD0017AE4A /* XCRemoteSwiftPackageReference "swift-dependencies" */;
+			productName = Dependencies;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,9 +8,11 @@
 import Foundation
 import ReduxCore
 import Combine
+import SwiftUI
 
-final class ObservableStore<State>: ObservableObject {
-    @Published private(set) var state: State
+@Observable
+final class ObservableStore<State> {
+    private(set) var state: State
     private let store: Store<State>
     private var cancellation: Cancellation?
 
@@ -32,3 +34,5 @@ final class ObservableStore<State>: ObservableObject {
         cancellation?.cancel()
     }
 }
+
+
