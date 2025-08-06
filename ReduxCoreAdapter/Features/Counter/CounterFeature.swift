@@ -49,22 +49,26 @@ enum CounterFeature {
     }
     
     
-    
-    // Простий middleware з continuousClock
+    private static var currentTimerTask: Task<Void, Never>?
+
     static let timerMiddleware: ReduxCore.Middleware<State> = { dispatch, action, oldState, newState in
+        
         @Dependency(\.continuousClock) var clock
         
         switch action as? Action {
         case .timerToggle:
             if newState.isTimerRun {
-                // Запускаємо таймер прямо з continuousClock
-                Task {
+                currentTimerTask?.cancel()
+                
+                currentTimerTask = Task {
                     for await _ in clock.timer(interval: .seconds(1)) {
                         dispatch(Action.timerTick)
                     }
                 }
+            } else {
+                currentTimerTask?.cancel()
+                currentTimerTask = nil
             }
-            // Для зупинки таймера не потрібно нічого робити - Task завершиться сам
         default:
             break
         }
