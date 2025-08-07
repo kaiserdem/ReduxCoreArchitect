@@ -1,9 +1,3 @@
-//
-//  Core.swift
-//  ReduxCoreAdapter
-//
-//  Created by Yaroslav Golinskiy on 05/08/2025.
-//
 
 import Foundation
 import ReduxCore

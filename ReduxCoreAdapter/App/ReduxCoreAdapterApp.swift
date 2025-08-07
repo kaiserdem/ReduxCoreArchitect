@@ -1,9 +1,3 @@
-//
-//  ReduxCoreAdapterApp.swift
-//  ReduxCoreAdapter
-//
-//  Created by Yaroslav Golinskiy on 05/08/2025.
-//
 
 import SwiftUI
 import ReduxCore
@@ -11,18 +5,18 @@ import ReduxCore
 @main
 struct ReduxCoreAdapterApp: App {
     
-    private let store = ObservableStore<CounterFeature.State>(
-        store: Store<CounterFeature.State>(
-            state: CounterFeature.State(),
-            reducer: CounterFeature.reducer,
-            middlewares: [CounterFeature.timerMiddleware]
+    private let tabStore = ObservableStore<TabFeature.State>(
+        store: Store<TabFeature.State>(
+            state: TabFeature.State(),
+            reducer: TabFeature.reducer,
+            middlewares: TabFeature.middlewares
         )
     )
     
     var body: some Scene {
         WindowGroup {
-            CounterView()
-                .environment(\.counterStore, store) 
+            TabView()
+                .environment(\.tabStore, tabStore)
         }
     }
 }

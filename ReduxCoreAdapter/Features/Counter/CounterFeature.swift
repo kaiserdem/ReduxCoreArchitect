@@ -1,16 +1,9 @@
-//
-//  CounterFeature.swift
-//  ReduxCoreAdapter
-//
-//  Created by Yaroslav Golinskiy on 05/08/2025.
-//
 
 import ReduxCore
 import SwiftUI
 import Dependencies
 
 struct CounterFeature: Feature {
-    
     struct State {
         var count: Int = 0
         var isTimerRun: Bool = false

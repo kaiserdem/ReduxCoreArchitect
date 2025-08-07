@@ -1,16 +1,9 @@
-//
-//  ContentView.swift
-//  ReduxCoreAdapter
-//
-//  Created by Yaroslav Golinskiy on 05/08/2025.
-//
 
 import ReduxCore
 import SwiftUI
 
 struct CounterView: View {
-    
-    @Environment(\.counterStore) private var store: ObservableStore<CounterFeature.State>?
+    @Environment(\.tabStore) private var store: ObservableStore<TabFeature.State>?
 
     var body: some View {
         ZStack {
@@ -25,18 +18,18 @@ struct CounterView: View {
                 Spacer()
                 
                 if let store = store {
-                    Text("Count: \(store.state.count)")
+                    Text("Count: \(store.state.counterState.count)")
                         .font(.title)
                         .foregroundColor(.white)
                     
-                    Text("Timer: \(store.state.isTimerRun ? "ON" : "OFF")")
+                    Text("Timer: \(store.state.counterState.isTimerRun ? "ON" : "OFF")")
                         .font(.headline)
-                        .foregroundColor(store.state.isTimerRun ? .green : .red)
+                        .foregroundColor(store.state.counterState.isTimerRun ? .green : .red)
                         .padding(.bottom)
                     
                     HStack {
                         Button("+") {
-                            store.dispatch(action: CounterFeature.Action.increment)
+                            store.dispatch(action: TabFeature.Action.counterAction(.increment))
                         }
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -44,7 +37,7 @@ struct CounterView: View {
                         .cornerRadius(8)
                         
                         Button("-") {
-                            store.dispatch(action: CounterFeature.Action.decrement)
+                            store.dispatch(action: TabFeature.Action.counterAction(.decrement))
                         }
                         .padding()
                         .frame(maxWidth: .infinity)
@@ -52,12 +45,12 @@ struct CounterView: View {
                         .cornerRadius(8)
                     }
                     
-                    Button(store.state.isTimerRun ? "Stop Timer" : "Start Timer") {
-                        store.dispatch(action: CounterFeature.Action.timerToggle)
+                    Button(store.state.counterState.isTimerRun ? "Stop Timer" : "Start Timer") {
+                        store.dispatch(action: TabFeature.Action.counterAction(.timerToggle))
                     }
                     .padding()
                     .frame(maxWidth: .infinity)
-                    .background(store.state.isTimerRun ? Color.red.opacity(0.8) : Color.green.opacity(0.8))
+                    .background(store.state.counterState.isTimerRun ? Color.red.opacity(0.8) : Color.green.opacity(0.8))
                     .foregroundColor(.white)
                     .cornerRadius(8)
                     .padding(.top)
@@ -72,4 +65,6 @@ struct CounterView: View {
         }
     }
 }
+
+
 
