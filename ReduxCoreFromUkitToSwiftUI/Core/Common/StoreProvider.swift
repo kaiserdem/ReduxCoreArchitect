@@ -9,10 +9,13 @@ import SwiftUI
 import ReduxCore
 
 /// Type alias to avoid conflict with SwiftUI's @State
+/// Псевдонім типу для уникнення конфлікту з SwiftUI @State
 typealias AppState = State
 
 /// ObservableStore for SwiftUI integration
 /// Replaces the StoreLocator pattern with Environment-based injection
+/// ObservableStore для інтеграції з SwiftUI
+/// Замінює паттерн StoreLocator на інжекцію через Environment
 @Observable
 final class ObservableStore<State> {
     private(set) var state: State
@@ -34,11 +37,13 @@ final class ObservableStore<State> {
     }
     
     /// Dispatch command without parameters
+    /// Відправка команди без параметрів
     func dispatch(command: Command) {
         command.perform()
     }
     
     /// Dispatch command with parameters
+    /// Відправка команди з параметрами
     func dispatch<T>(command: CommandWith<T>, with value: T) {
         command.perform(with: value)
     }
@@ -49,8 +54,10 @@ final class ObservableStore<State> {
 }
 
 // MARK: - Environment for global state access
+// MARK: - Environment для глобального доступу до стану
 
 /// Environment key for the app store
+/// Ключ Environment для app store
 struct AppStoreKey: EnvironmentKey {
     static var defaultValue: ObservableStore<AppState>? = nil
 }
