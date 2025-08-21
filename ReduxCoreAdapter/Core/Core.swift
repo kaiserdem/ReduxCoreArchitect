@@ -27,9 +27,6 @@ final class ObservableStore<State> { //generic параметр, може бут
     deinit {
         cancellation?.cancel() //коли ObservableStore знищується, скасовуємо підписку, запобігає memory leaks
     }
-    
-                            
-                            
 }
 
 protocol Feature {

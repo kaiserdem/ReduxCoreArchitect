@@ -4,19 +4,19 @@ import ReduxCore
 
 @main
 struct ReduxCoreAdapterApp: App {
-    
-    private let tabStore = ObservableStore<TabFeature.State>(
-        store: Store<TabFeature.State>(
-            state: TabFeature.State(),
-            reducer: TabFeature.reducer,
-            middlewares: TabFeature.middlewares
+
+    private let mainStore = ObservableStore<MainFeature.State>(
+        store: Store<MainFeature.State>(
+            state: MainFeature.State(),
+            reducer: MainFeature.reducer,
+            middlewares: MainFeature.middlewares
         )
     )
     
     var body: some Scene {
         WindowGroup {
-            TabView()
-                .environment(\.tabStore, tabStore)
+            MainView()
+                .environment(\.mainStore, mainStore)
         }
     }
 }

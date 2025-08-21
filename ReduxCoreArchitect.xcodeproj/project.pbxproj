@@ -11,6 +11,7 @@
 		051FC9772E4201CE0017AE4A /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9762E4201CE0017AE4A /* ReduxCore */; };
 		051FC9792E4201CE0017AE4A /* ReduxCore in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9762E4201CE0017AE4A /* ReduxCore */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		051FC9852E4231FD0017AE4A /* Dependencies in Frameworks */ = {isa = PBXBuildFile; productRef = 051FC9842E4231FD0017AE4A /* Dependencies */; };
+		055139B62E578A53009F21C9 /* ReduxCore in Frameworks */ = {isa = PBXBuildFile; productRef = 055139B52E578A53009F21C9 /* ReduxCore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		051FC9532E42000E0017AE4A /* ReduxCoreArchitect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxCoreArchitect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxCoreAdapter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0551397A2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxCoreFromUkitToSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -41,6 +43,11 @@
 		051FC96B2E4201A20017AE4A /* ReduxCoreAdapter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ReduxCoreAdapter;
+			sourceTree = "<group>";
+		};
+		0551397B2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ReduxCoreFromUkitToSwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -63,6 +70,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		055139772E577C60009F21C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				055139B62E578A53009F21C9 /* ReduxCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -71,6 +86,7 @@
 			children = (
 				051FC9552E42000E0017AE4A /* ReduxCoreArchitect */,
 				051FC96B2E4201A20017AE4A /* ReduxCoreAdapter */,
+				0551397B2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI */,
 				051FC9752E4201CE0017AE4A /* Frameworks */,
 				051FC9542E42000E0017AE4A /* Products */,
 			);
@@ -81,6 +97,7 @@
 			children = (
 				051FC9532E42000E0017AE4A /* ReduxCoreArchitect.app */,
 				051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */,
+				0551397A2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +160,29 @@
 			productReference = 051FC96A2E4201A20017AE4A /* ReduxCoreAdapter.app */;
 			productType = "com.apple.product-type.application";
 		};
+		055139792E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 055139842E577C62009F21C9 /* Build configuration list for PBXNativeTarget "ReduxCoreFromUkitToSwiftUI" */;
+			buildPhases = (
+				055139762E577C60009F21C9 /* Sources */,
+				055139772E577C60009F21C9 /* Frameworks */,
+				055139782E577C60009F21C9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				0551397B2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI */,
+			);
+			name = ReduxCoreFromUkitToSwiftUI;
+			packageProductDependencies = (
+				055139B52E578A53009F21C9 /* ReduxCore */,
+			);
+			productName = ReduxCoreFromUkitToSwiftUI;
+			productReference = 0551397A2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -157,6 +197,9 @@
 						CreatedOnToolsVersion = 16.4;
 					};
 					051FC9692E4201A20017AE4A = {
+						CreatedOnToolsVersion = 16.4;
+					};
+					055139792E577C60009F21C9 = {
 						CreatedOnToolsVersion = 16.4;
 					};
 				};
@@ -181,6 +224,7 @@
 			targets = (
 				051FC9522E42000E0017AE4A /* ReduxCoreArchitect */,
 				051FC9692E4201A20017AE4A /* ReduxCoreAdapter */,
+				055139792E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI */,
 			);
 		};
 /* End PBXProject section */
@@ -200,6 +244,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		055139782E577C60009F21C9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -211,6 +262,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		051FC9662E4201A20017AE4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		055139762E577C60009F21C9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -453,6 +511,64 @@
 			};
 			name = Release;
 		};
+		055139822E577C62009F21C9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.ReduxCoreFromUkitToSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		055139832E577C62009F21C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 88QUA4HBQJ;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kaiserdem.ReduxCoreFromUkitToSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -479,6 +595,15 @@
 			buildConfigurations = (
 				051FC9732E4201A40017AE4A /* Debug */,
 				051FC9742E4201A40017AE4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		055139842E577C62009F21C9 /* Build configuration list for PBXNativeTarget "ReduxCoreFromUkitToSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				055139822E577C62009F21C9 /* Debug */,
+				055139832E577C62009F21C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -519,6 +644,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 051FC9832E4231FD0017AE4A /* XCRemoteSwiftPackageReference "swift-dependencies" */;
 			productName = Dependencies;
+		};
+		055139B52E578A53009F21C9 /* ReduxCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 051FC9612E4200400017AE4A /* XCRemoteSwiftPackageReference "ReduxCore" */;
+			productName = ReduxCore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
