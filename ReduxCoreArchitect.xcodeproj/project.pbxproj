@@ -87,7 +87,6 @@
 				051FC9552E42000E0017AE4A /* ReduxCoreArchitect */,
 				051FC96B2E4201A20017AE4A /* ReduxCoreAdapter */,
 				0551397B2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI */,
-				051FC9752E4201CE0017AE4A /* Frameworks */,
 				051FC9542E42000E0017AE4A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -100,13 +99,6 @@
 				0551397A2E577C60009F21C9 /* ReduxCoreFromUkitToSwiftUI.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		051FC9752E4201CE0017AE4A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
